@@ -1,12 +1,16 @@
 require 'rails_helper'
 
 describe ErrorSerializer do
-  let(:code) { :bad_request }
-  let(:error) { Error.new(code: code) }
+  let(:error) { Error.new(code: :bad_request) }
   let(:json) { ErrorSerializer.new(error).to_json }
-  let(:error_json) { parse_json(json)['error'] }
 
-  it 'returns user' do
-    expect(error_json).to be_an_error_representation(error)
+  subject(:parsed_json) { parse_json(json) }
+
+  it 'include "error" root element' do
+    expect(parsed_json).to include('error')
+  end
+
+  it 'include error representation' do
+    expect(parsed_json['error']).to be_an_error_representation(error)
   end
 end

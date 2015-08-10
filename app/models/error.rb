@@ -2,19 +2,10 @@ class Error
   include ActiveModel::Model
   include ActiveModel::Serialization
 
-  MESSAGES = {
-    bad_request: 'Bad Request',
-    not_found: 'Resource Not Found',
-    validation_error: 'Validation Error',
-    unauthorized: 'Authentication Failed'
-  }
+  ATTRIBBUTES = %i(code message validations)
+  attr_accessor(*ATTRIBBUTES)
 
-  attr_accessor :code, :message, :validations
-
-  def initialize(params = {})
-    super
-    self.message = MESSAGES[code] unless message
+  def attributes
+    instance_values.with_indifferent_access
   end
-
-  alias_method :attributes, :instance_values
 end
