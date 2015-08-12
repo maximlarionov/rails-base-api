@@ -3,9 +3,6 @@ class ApplicationController < ActionController::API
 
   include SkipTrackable
   include TokenAuthentication
-  include ErrorResponse
-
-  self.responder = ApiResponder
 
   decent_configuration do
     strategy DecentExposure::StrongParametersStrategy

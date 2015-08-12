@@ -5,6 +5,8 @@ require 'active_record/railtie'
 require 'action_controller/railtie'
 require 'action_mailer/railtie'
 
+require 'api_format/railtie'
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -22,6 +24,9 @@ module RailsBaseApi
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    # Setup custom PublicExceptions class to render errors using ErrorSerializer
+    # config.exceptions_app = RailsPublicExceptions.new(Rails.public_path)
 
     # Default e-mail address which will be shown in the "from" devise emails, initializers/devise.rb.
     config.noreply = 'noreply@fs-rails-base-api.heroku.com'

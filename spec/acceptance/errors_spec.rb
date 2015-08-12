@@ -2,14 +2,16 @@ require 'rails_helper'
 require 'rspec_api_documentation/dsl'
 
 resource 'Errors' do
-  subject(:json_response) { json_response_body }
+  header 'Accept', 'application/json'
+
+  subject(:response) { json_response_body }
 
   get '/not-found' do
     example_request 'Request to unexisting page' do
-      error = Error.new(code: :unauthorized, message: 'Invalid email or password.')
+      error = ApiFormat::Error.new(status: '404', error: 'Not Found')
 
-      expect(response_status).to eq 500
-      expect(json_response['error']).to be_an_error_representation(error)
+      expect(response_status).to eq 404
+      expect(response['error']).to be_an_error_representation(error)
     end
   end
 end
