@@ -17,7 +17,10 @@ resource 'Sessions' do
     end
 
     example_request 'Sign in with invalid password', password: '' do
+      error = ApiFormat::Error.new(status: '401', error: 'Invalid email or password.')
+
       expect(response_status).to eq 401
+      expect(json_response['error']).to be_an_error_representation(error)
     end
   end
 end
