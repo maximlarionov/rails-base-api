@@ -1,4 +1,4 @@
-module ApiFormat
+module RailsApiFormat
   class RailsPublicExceptions < ActionDispatch::PublicExceptions
     def call(env)
       status       = env['PATH_INFO'][1..-1]

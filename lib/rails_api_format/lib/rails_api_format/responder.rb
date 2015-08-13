@@ -1,4 +1,4 @@
-module ApiFormat
+module RailsApiFormat
   class Responder < ActionController::Responder
     def api_behavior
       fail MissingRenderer.new(format), "No renderer defined for format: #{format}" unless has_renderer?
@@ -12,8 +12,8 @@ module ApiFormat
       end
     end
 
-    def resource_errors
-      Error.new(code: :validation_error, validations: resource.errors).to_json
+    def json_resource_errors
+      Error.new(status: :unprocessable_entity, validations: resource.errors)
     end
   end
 end

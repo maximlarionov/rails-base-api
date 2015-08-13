@@ -5,7 +5,9 @@ ruby '2.2.2'
 # the most important stuff
 gem 'rails', '4.2.3'
 gem 'pg'
+
 gem 'rails-api'
+gem 'rails_api_format', path: 'lib/rails_api_format'
 
 # all other gems
 gem 'active_model_serializers', '~> 0.8.3'

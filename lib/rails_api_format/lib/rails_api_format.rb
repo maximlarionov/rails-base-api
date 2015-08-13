@@ -1,4 +1,6 @@
-module ApiFormat
+require 'rails_api_format/railtie'
+
+module RailsApiFormat
   extend ::ActiveSupport::Autoload
 
   autoload :Error

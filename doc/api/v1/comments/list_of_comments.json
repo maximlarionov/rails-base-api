@@ -31,20 +31,20 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"comments\":[{\"id\":2,\"title\":\"Porro doloribus totam sunt velit voluptatem possimus.\",\"text\":\"Autem nam quos eius exercitationem. Repellendus nam reprehenderit cumque ut velit et. Et quo perspiciatis.\",\"post\":null,\"user\":{\"id\":1,\"authentication_token\":\"TEKCD4e-ohaxmv3BKw7z\",\"email\":\"user1@example.com\"}},{\"id\":1,\"title\":\"Ipsa ut est porro qui.\",\"text\":\"Natus molestiae quisquam omnis iure mollitia. Itaque quia non eos voluptas consectetur exercitationem quo. Iste similique accusamus temporibus laborum voluptatem dolorem. Quam aliquid qui et saepe.\",\"post\":null,\"user\":{\"id\":1,\"authentication_token\":\"TEKCD4e-ohaxmv3BKw7z\",\"email\":\"user1@example.com\"}}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
+      "response_body": "{\"comments\":[{\"id\":7,\"title\":\"Unde fuga dolorem accusamus ipsam doloribus minus.\",\"text\":\"Consequatur quia omnis atque laudantium. Est alias voluptas quidem est architecto. Vel sunt nisi. Veniam voluptatem et.\",\"post\":null,\"user\":{\"id\":5,\"authentication_token\":\"ywNg2KYEUBns2E-RSwSf\",\"email\":\"user5@example.com\"}},{\"id\":6,\"title\":\"Tempore eos quo aliquam odit aut modi ut.\",\"text\":\"Corporis in occaecati. Sed vitae qui consequatur. Dicta odit repudiandae id nihil aliquam ut et.\",\"post\":null,\"user\":{\"id\":5,\"authentication_token\":\"ywNg2KYEUBns2E-RSwSf\",\"email\":\"user5@example.com\"}}],\"meta\":{\"pagination\":{\"total\":2,\"per_page\":25,\"page\":1}}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"58edbd9002b1b83ca8b6f9fac67e7f13\"",
+        "ETag": "W/\"fc18b70ad7dd6e684ef3a0fcb0824bbf\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "cf28ff2c-e744-45c0-9181-baab3ba72748",
-        "X-Runtime": "0.034964",
-        "Content-Length": "713"
+        "X-Request-Id": "7c101525-871a-4a3d-8c8c-4bcbbe1b0c76",
+        "X-Runtime": "0.050111",
+        "Content-Length": "641"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"X-Auth-Token: TEKCD4e-ohaxmv3BKw7z\" \\\n\t-H \"Origin: \""
+      "curl": "curl \"http://localhost:5000/v1/user/comments?page=1&per_page=25\" -X GET \\\n\t-H \"X-Auth-Token: ywNg2KYEUBns2E-RSwSf\" \\\n\t-H \"Origin: \""
     }
   ]
 }

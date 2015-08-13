@@ -8,10 +8,10 @@ resource 'Errors' do
 
   get '/not-found' do
     example_request 'Request to unexisting page' do
-      error = ApiFormat::Error.new(status: '404', error: 'Not Found')
+      error = RailsApiFormat::Error.new(status: :not_found, error: 'Not Found')
 
       expect(response_status).to eq 404
-      expect(response['error']).to be_an_error_representation(error)
+      expect(response).to be_an_error_representation(error)
     end
   end
 end
